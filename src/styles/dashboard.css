@@ -1,0 +1,223 @@
+/* ==========================================
+   GLOBAL
+========================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(
+    135deg,
+    #f8f8f8,
+    #ffffff
+  );
+  color: #1a1a1a;
+  min-height: 100vh;
+}
+
+/* ==========================================
+   DASHBOARD CONTAINER
+========================================== */
+
+.dashboard {
+  padding: 40px;
+  max-width: 1600px;
+  margin: auto;
+}
+
+.dashboard h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.dashboard h1::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #d4af37;
+  display: block;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+/* ==========================================
+   FILTER CARD
+========================================== */
+
+.filters {
+  background: #fff;
+  padding: 24px;
+  border-radius: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 25px;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.05),
+    0 4px 12px rgba(212, 175, 55, 0.08);
+}
+
+/* ==========================================
+   INPUTS
+========================================== */
+
+.filters input {
+  height: 50px;
+  padding: 0 16px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.filters input:focus {
+  outline: none;
+  border-color: #d4af37;
+  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.15);
+  background: white;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.filters button,
+.export-btn {
+  height: 50px;
+  border: none;
+  padding: 0 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+/* Search Button */
+
+.filters button {
+  background: linear-gradient(
+    135deg,
+    #111,
+    #2b2b2b
+  );
+  color: white;
+}
+
+.filters button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* Export Button */
+
+.export-btn {
+  background: linear-gradient(
+    135deg,
+    #d4af37,
+    #f2d46c
+  );
+  color: #111;
+  margin-bottom: 25px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.export-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 15px 30px rgba(212, 175, 55, 0.35);
+}
+
+/* ==========================================
+   DATA GRID WRAPPER
+========================================== */
+
+.data-grid-wrapper {
+  background: rgba(255, 255, 255, 0.493);
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.06);
+}
+
+/* ==========================================
+   MATERIAL UI DATAGRID
+========================================== */
+
+.MuiDataGrid-root {
+  border: none !important;
+}
+
+.MuiDataGrid-columnHeaders {
+  background: linear-gradient(
+    135deg,
+    #111,
+    #1f1f1f
+  );
+  color: rgba(135, 134, 134, 0.977);
+  font-weight: 600;
+}
+
+.MuiDataGrid-columnHeaderTitle {
+  font-weight: 700 !important;
+}
+
+.MuiDataGrid-row:hover {
+  background: rgba(212, 175, 55, 0.08);
+}
+
+.MuiDataGrid-cell {
+  border-color: #f1f1f1 !important;
+}
+
+.MuiDataGrid-footerContainer {
+  background: #fafafa;
+}
+
+/* ==========================================
+   LOADING STATE
+========================================== */
+
+.loading {
+  text-align: center;
+  padding: 50px;
+  font-size: 18px;
+  color: #555;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 20px;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filters input,
+  .filters button,
+  .export-btn {
+    width: 100%;
+  }
+
+  .dashboard h1 {
+    font-size: 1.5rem;
+  }
+}
